@@ -5,10 +5,9 @@ describe.each([
   [[1, 2, 3, 4], 3, true],
   [['a', 'e', 'y', 'z'], 'f', false],
   ['hello', 'e', true],
-  [[], 'a', false],
-  ['mandos', 'mda', true]
+  [[], 'a', false]
 ])('%# Does arr include x ?', (arr, x, expected) => {
-  test('should check if item is in arr', () => {
+  test(`Should check if ${x} is in ${arr}`, () => {
     expect(doesInclude(arr, x)).toBe(expected)
   })
 })
