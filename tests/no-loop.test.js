@@ -2,13 +2,19 @@ const doesInclude = require('../no-loop')
 const fs = require('fs')
 
 describe.each([
-  [[1, 2, 3, 4], 3, true],
-  [['a', 'e', 'y', 'z'], 'f', false],
+  [
+    [1, 2, 3, 4], 3, true
+  ],
+  [
+    ['a', 'e', 'y', 'z'], 'f', false
+  ],
   ['hello', 'e', true],
-  [[], 'a', false]
-])('%# Does arr include x ?', (arr, x, expected) => {
-  test(`Should check if ${x} is in ${arr}`, () => {
-    expect(doesInclude(arr, x)).toBe(expected)
+  [
+    [], 'a', false
+  ]
+])('%# Does data include x ?', (data, x, expected) => {
+  test(`Should check if ${x} is in ${data}`, () => {
+    expect(doesInclude(data, x)).toBe(expected)
   })
 })
 
